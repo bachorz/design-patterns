@@ -5,10 +5,12 @@ import com.patterns.factory.*;
 public class Main {
 
     public static void main(String[] args) {
-        InfantryFactory factory = new RedInfantryUnitFactory();
+        Factory factory = new UnitFactory();
 
-        InfanrtyUnit tank = factory.createUnit(UnitType.TANK);
-        InfanrtyUnit rifleman = factory.createUnit(UnitType.RIFLEMAN);
+        Unit tank = factory.createUnit(UnitType.TANK);
+        Unit rifleman = factory.createUnit(UnitType.RIFLEMAN);
+
+        System.out.println(tank);
 
     }
 
