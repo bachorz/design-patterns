@@ -2,5 +2,5 @@ package com.patterns.factory;
 
 public enum UnitType {
 
-    TANK,RIFLEMAN
+    TANK,RIFLEMAN,HELICOPTER
 }
