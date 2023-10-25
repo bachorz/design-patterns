@@ -2,6 +2,10 @@ package com.patterns;
 
 import com.patterns.decorator.*;
 import com.patterns.decoratorMeal.*;
+import com.patterns.pizzaDecorator.AdditionalCheeseDecorator;
+import com.patterns.pizzaDecorator.BasicPizza;
+import com.patterns.pizzaDecorator.PizzaOrder;
+import com.patterns.pizzaDecorator.ToppingPizzaDecorator;
 
 public class Main {
     
@@ -9,7 +13,9 @@ public class Main {
 
      //   generateMap();
 
-        preapreMeal();
+    //    prepareMeal();
+
+        orderPizza();
     }
 
     private static void generateMap() {
@@ -26,7 +32,7 @@ public class Main {
 
     }
 
-    public static void preapreMeal(){
+    public static void prepareMeal(){
 
         System.out.println("Nowy posiłek: ");
         Meal riceMeal = new RiceMeal();
@@ -37,6 +43,19 @@ public class Main {
         System.out.println("\nNowy posiłek: ");
         Meal potatoMealWithChickenAndSauce = new SauceMealDecorator(new ChickenMealDecorator(new PotatoMeal()));
         potatoMealWithChickenAndSauce.prepareMeal();
+
+    }
+
+    public static void orderPizza(){
+
+        PizzaOrder pizzaOrder = new BasicPizza();
+        System.out.println(pizzaOrder.getDescription() + " cost " + pizzaOrder.getCost());
+        pizzaOrder = new ToppingPizzaDecorator(pizzaOrder, "salami");
+        System.out.println(pizzaOrder.getDescription() + " cost " + pizzaOrder.getCost());
+        pizzaOrder = new ToppingPizzaDecorator(pizzaOrder, "olives");
+        System.out.println(pizzaOrder.getDescription() + " cost " + pizzaOrder.getCost());
+        pizzaOrder = new AdditionalCheeseDecorator(pizzaOrder);
+        System.out.println(pizzaOrder.getDescription() + " cost " + pizzaOrder.getCost());
 
     }
 
