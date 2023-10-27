@@ -15,6 +15,7 @@ public class Main {
 
     public static void main(String[] args) {
 
+
       // ORDER
 //        Order order = new Order(110L, OrderStatus.ZAREJESTROWEANE);
 //
@@ -52,6 +53,9 @@ public class Main {
         System.out.println("Nowa prognoza - powiadomienie tylko dla serwisu internetowego:");
         weatherForecast.updateForecast(18, 1007);
 
-
     }
+
+
+
+
 }
