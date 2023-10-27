@@ -1,5 +1,6 @@
 package com.patterns;
 
+
 import com.patterns.notification.Email;
 import com.patterns.notification.MobilaApp;
 import com.patterns.notification.TextMessage;
@@ -50,6 +51,7 @@ public class Main {
         weatherForecast.unregisterObserver(radioNews);
         System.out.println("Nowa prognoza - powiadomienie tylko dla serwisu internetowego:");
         weatherForecast.updateForecast(18, 1007);
+
 
     }
 }
