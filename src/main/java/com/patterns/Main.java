@@ -11,7 +11,7 @@ public class Main {
 
             @Override
             public void onContinentalDevice() {
-                System.out.println("gra muzyka");
+                System.out.println("gra muzyczka");
             }
         };
 
